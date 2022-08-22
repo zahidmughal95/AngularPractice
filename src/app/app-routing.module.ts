@@ -1,10 +1,22 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { NgModule } from '@angular/core';
+import { ObservablePracticeComponent } from './Components/observable-practice/observable-practice.component';
+
+const appRoutes: Routes = [
+  { path: 'observable-practice', component: ObservablePracticeComponent },
+  {path: '', redirectTo: '/observable-practice', pathMatch: 'full'},
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
+  ],
+  exports: [
+    RouterModule
+  ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

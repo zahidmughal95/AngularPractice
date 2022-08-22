@@ -1,16 +1,23 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+import { GameGridComponent } from './Components/observable-practice/game-grid/game-grid.component';
+import {HttpClientModule} from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { ObservablePracticeComponent } from './Components/observable-practice/observable-practice.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ObservablePracticeComponent,
+    GameGridComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
